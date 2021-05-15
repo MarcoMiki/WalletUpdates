@@ -8,7 +8,7 @@ your own API key from https://www.coinapi.io/ (it's free) to declare in exhange_
 
 Your own API key and secret from Binance in assets.py. Note that you should be able to also edit the exchange and use another, however you may need to check the ccxt manual (https://github.com/ccxt/ccxt/wiki/Manual) to see whether the authentication process is different
 
-Your own details for smtp server, sender email and receiver email in mail_server.py
+Your own details for smtp server, sender email (and password) and receiver email in mail_server.py
 
 You can also change the currency variable in main.py in case you want the daily update in EUR, USD or whatever else you normally use
 
