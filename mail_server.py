@@ -7,6 +7,7 @@ PASSWORD = os.environ.get("PASSWORD")
 SERVER = os.environ.get("SERVER")
 
 
+
 def send_mail(today_amount, yesterday_amount, diff, currency):
     with smtplib.SMTP(SERVER) as connection:
         connection.starttls()

@@ -1,10 +1,18 @@
-wallet = {
-    "THETA": 2.48327970,
-    "BNB": 0.03504632,
-    "ETH": 0.00454000,
-    "ENJ": 6.54000000,
-    "WAVES": 0.43600000,
-    "MATIC": 10.70000000,
-    "ETC": 0.11700000,
-    "LINK": 0.25200000
-}
+import ccxt
+import os
+
+BIN_KEY = os.environ.get("BIN_KEY")
+BIN_SECRET = os.environ.get("BIN_SECRET")
+
+
+exchange_auth = {
+        "apiKey": BIN_KEY,
+        "secret": BIN_SECRET
+    }
+
+exchange = ccxt.binance(exchange_auth)
+
+balance = exchange.fetch_balance()["total"]
+
+wallet = {key: value for key, value in balance.items() if value != 0.0}
+
