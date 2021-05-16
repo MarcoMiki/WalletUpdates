@@ -8,6 +8,8 @@ Your own API key and secret from Binance
 
 Your own details for smtp server, sender email (and password) and receiver email
 
+Note that if you wish to use a gmail to send the email you need to enable less secure apps access for that Google profile. More info here: https://support.google.com/accounts/answer/6010255 (You may want to create a dummy gmail for this purpose)
+
 [optional] the fiat currency you want to get your results into (default is GBP)
 
 All of these variables are in main.py declared as environmental variables, except for the currency that is just a string. You can either declare your own environmental variables or declare them all as strings, as you prefer.
