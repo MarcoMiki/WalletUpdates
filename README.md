@@ -4,8 +4,6 @@ This python program will connect to your Binance wallet and send an email update
 
 Things you will need to set up to make this work:
 
-your own API key from https://www.coinapi.io/ (it's free)
-
 Your own API key and secret from Binance 
 
 Your own details for smtp server, sender email (and password) and receiver email
