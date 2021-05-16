@@ -1,20 +1,20 @@
 import smtplib
-import os
-
-SENDER = os.environ.get("SENDER")
-RECIPIENT = os.environ.get("RECIPIENT")
-PASSWORD = os.environ.get("PASSWORD")
-SERVER = os.environ.get("SERVER")
 
 
+class MailServer:
+    def __init__(self, sender, recipient, password, server):
+        self.sender = sender
+        self.recipient = recipient
+        self.password = password
+        self.server = server
 
-def send_mail(today_amount, yesterday_amount, diff, currency):
-    with smtplib.SMTP(SERVER) as connection:
-        connection.starttls()
-        connection.login(SENDER, PASSWORD)
-        connection.sendmail(
-            from_addr=SENDER,
-            to_addrs=RECIPIENT,
-            msg=f"Subject:Daily Portfolio update: {diff}%\n\nYour portfolio is worth {today_amount} {currency} today! "
-                f"It was {yesterday_amount} {currency} yesterday"
-        )
+    def send_mail(self, value_today, value_yesterday, diff, currency, emoticon):
+        with smtplib.SMTP(self.server) as connection:
+            connection.starttls()
+            connection.login(self.sender, self.password)
+            connection.sendmail(
+                from_addr=self.sender,
+                to_addrs=self.recipient,
+                msg=f"Subject:Daily Portfolio update: {diff}%\n\nYour portfolio is worth {value_today} {currency} "
+                    f"today {emoticon} it was {value_yesterday} {currency} yesterday. "
+            )
