@@ -1,6 +1,6 @@
 # WalletUpdates
 
-This python program will conect to your Binance wallet and send an email update on its recent performance to a specified recipient.
+This python program will connect to your Binance wallet and send an email update on its recent performance to a specified recipient.
 
 Things you will need to set up to make this work:
 
