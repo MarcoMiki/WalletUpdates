@@ -2,7 +2,7 @@
 
 This python program will take a wallet of cryptocurrencies in assets.py and send an email update on its performance to a specified recipient.
 
-Things you will need to set up, either as environmental variables or to replace the os.envorin... part in the relevant file
+Things you will need to set up to make this work:
 
 your own API key from https://www.coinapi.io/ (it's free)
 
